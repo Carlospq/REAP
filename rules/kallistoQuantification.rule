@@ -46,7 +46,7 @@ rule kallistoQuantification:
 		# for single-end data			
 		else:
 			inputfiles=space_join(input.mate1)
-			arguments = "-b 100 --single -l {} -s {}".format({params.length}, {params.sd})
+			arguments = "-b 100 --single -l {} -s {}".format(params.length, params.sd)
 
 		shell("module add UHTS/Analysis/kallisto/{params.kallisto}; mkdir -p "+project+"/kallisto; kallisto quant {arguments} -i {input.index} -o {params.outputs} {inputfiles} 2>{log}")
 		
