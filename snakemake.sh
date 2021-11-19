@@ -13,7 +13,7 @@
 #SBATCH --mail-type=ALL
 
 # send mail to this address
-#SBATCH --mail-user=carlos.pulido@dbmr.unibe.ch
+#SBATCH --mail-user=user@institution.com
 
 # set memory [K|M|G|T]
 #SBATCH --mem=1G
@@ -30,4 +30,4 @@
 
 # commands to execute
 # source .snakemake_venv/bin/activate
-snakemake -s harvest --printshellcmds --cluster "sbatch --mem 90G -N 1 -o /data/projects/p283_rna_and_disease/projects/sinergia/sinergia/sinergia_main/logs/output -e /data/projects/p283_rna_and_disease/projects/sinergia/sinergia/sinergia_main/logs/error -J SM_" --jobs 10 --latency-wait 3600
+snakemake -s harvest --printshellcmds --cluster "sbatch --mem 90G -N 1 -o /path/to/log -e /path/to/eroorLog -J jobName" --jobs 10 --latency-wait 3600
