@@ -1,7 +1,7 @@
 # main snakefile
 
 # HOW TO LAUNCH ON THE CLUSTER
-# snakemake --printshellcmds --cluster "sbatch -N 8 -o /data/projects/p283_rna_and_disease/projects/sinergia/sinergia/sinergia_main/output -e /data/projects/p283_rna_and_disease/projects/sinergia/sinergia/sinergia_main/error -J SM_" --jobs 10 --latency-wait 3600
+# snakemake --printshellcmds --cluster "sbatch -N 8 -o /path/to/jobLog -e /path/to/jobErrorLog -J jobName" --jobs 10 --latency-wait 3600
 
 
 ######### IMPORT #########
